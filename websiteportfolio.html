@@ -14,9 +14,7 @@
   --muted: #c9d6e3;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
@@ -35,7 +33,6 @@ h1 {
   text-align: center;
   margin-bottom: 40px;
   font-weight: 600;
-  letter-spacing: 0.5px;
 }
 
 .project-card {
@@ -59,6 +56,12 @@ h1 {
   width: 100%;
   border-radius: 10px;
   object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+.project-image:hover {
+  transform: scale(1.03);
 }
 
 .project-title {
@@ -96,6 +99,27 @@ h1 {
   transform: translateY(-2px);
 }
 
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+
 @media (max-width: 768px) {
   .project-card {
     grid-template-columns: 1fr;
@@ -119,7 +143,7 @@ h1 {
     <div>
       <h2 class="project-title">Checkers Game — Python</h2>
       <p class="project-description">
-        Our team of three developed an engaging two-player checkers game featuring a clean user interface and an intelligent AI opponent. Built using Python with pygame and tkinter, the system handles animation, player interaction, and strategic AI decision-making, delivering an immersive and entertaining gameplay experience.
+        Our team of three developed an engaging two-player checkers game featuring a clean user interface and an intelligent AI opponent. Built using Python with pygame and tkinter, the system handles animation, player interaction, and strategic AI decision-making.
       </p>
     </div>
   </div>
@@ -129,7 +153,7 @@ h1 {
     <div>
       <h2 class="project-title">Relational Database — MySQL</h2>
       <p class="project-description">
-        Designed and implemented a simulated Major League Baseball database consisting of over 14 entities and 8 complex relationships. Thousands of records were generated using structured CSV imports, creating a realistic dataset for advanced querying, analysis, and relational modeling.
+        Designed and implemented a simulated Major League Baseball database consisting of over 14 entities and 8 complex relationships with thousands of generated records for analysis and querying.
       </p>
     </div>
   </div>
@@ -139,12 +163,33 @@ h1 {
     <div>
       <h2 class="project-title">MCU Character Network — Python</h2>
       <p class="project-description">
-        Leveraged Python, NetworkX, and OpenAI's GPT-3.5 to extract movie dialogue and construct a large-scale character interaction network. Each character is modeled as a node with dynamic relationships, producing a visually rich and analytically valuable network representation.
+        Leveraged Python, NetworkX, and OpenAI's GPT-3.5 to extract dialogue and construct a large-scale character interaction network for visual and analytical exploration.
       </p>
     </div>
   </div>
-
 </div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <img id="lightbox-img" src="">
+</div>
+
+<script>
+const images = document.querySelectorAll('.project-image');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+
+images.forEach(img => {
+  img.addEventListener('click', () => {
+    lightboxImg.src = img.src;
+    lightbox.style.display = 'flex';
+  });
+});
+
+lightbox.addEventListener('click', () => {
+  lightbox.style.display = 'none';
+});
+</script>
 
 </body>
 </html>
