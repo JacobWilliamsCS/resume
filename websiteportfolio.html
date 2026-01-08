@@ -24,25 +24,33 @@
     }
 
     li {
-      margin-bottom: 40px; /* Increased margin for better spacing */
-      text-align: center; /* Center align the content inside each list item */
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 25px;
+      align-items: center;
+      margin-bottom: 50px;
+      text-align: left;
+    }
+
+    .project-image {
+      max-width: 200px;
+      border-radius: 6px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.35);
+    }
+
+    .project-content {
+      display: flex;
+      flex-direction: column;
     }
 
     .project-title {
-      color: #fff; /* White text */
+      margin: 0;
       font-size: 24px;
     }
 
     .project-description {
-      font-size: 16px;
-      margin-top: 10px;
-    }
-
-    .project-image {
-      display: block;
-      margin: 0 auto 20px; /* Center the image horizontally and add some bottom margin for spacing */
-      max-width: 200px;
-      height: auto;
+      margin-top: 8px;
+      line-height: 1.6;
     }
 
     .home-button {
@@ -73,18 +81,24 @@
     <li>
       <h2 class="project-title">Checkers Game - Python</h2>
       <img class="project-image" src="checkers.png" alt="Checkers">
+      <div class="project-content">
       <p class="project-description">Our team of three accomplished the development of an engaging two-player checkers game, complete with a user-friendly interface and an intelligent AI opponent. We leveraged the capabilities of the pygame and tkinter libraries in Python to build this interactive gaming experience. Pygame enabled us to handle graphics, animation, and user input, while tkinter facilitated the creation of an intuitive and visually appealing interface. The highlight of our project was the implementation of an AI opponent that intelligently strategizes and makes moves based on game analysis. Together, these components combined to deliver a captivating checkers game that guarantees hours of entertainment for players of all skill levels.</p>
+      </div>
     </li>
     <li>
       <h2 class="project-title">Relational Database - MySQL</h2>
       <img class="project-image" src="database.jpg" alt="database">
+      <div class="project-content">
       <p class="project-description">We designed and developed a simulated Major League Baseball (MLB) database that mirrors the real-life structure of the MLB. This comprehensive database comprises more than 14 entities, representing various aspects of the league, as well as 8 relationships that capture the interconnections between these entities. To populate the database with substantial data, we generated thousands of entries using Excel CSV files, ensuring the authenticity of the information while maintaining the fictitious nature of the data. This project aims to provide a robust platform for exploring and analyzing MLB-related scenarios and data-driven insights.</p>
+      </div>
     </li>
     <li>
       <h2 class="project-title">Marvel Cinematic Universe Network - Python</h2>
       <img class="project-image" src="MCUgraph.jpg" alt="MCU">
+      <div class="project-content">
       <p class="project-description">
         Utilizing OpenAI's GPT-3.5, we harnessed Python and Networkx to extract movie dialogues, enabling us to construct a comprehensive network representation of Marvel characters. In this network, each character is depicted as a node, while interactions between characters are represented as links. Working collaboratively in a team of two, we not only created a visually appealing gml file but also conducted extensive analysis on the network structure and dynamics.
+        </div>
       </p>
     </li>
   </ul>
