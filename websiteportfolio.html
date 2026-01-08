@@ -1,111 +1,150 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-  <title>Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-      background-color: #001f3f; /* Navy Blue */
-      color: #fff; /* White text */
-    }
+<meta charset="UTF-8">
+<title>Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    h1 {
-      color: #fff; /* White text */
-      text-align: center;
-      margin-top: 0;
-    }
+<style>
+:root {
+  --bg: #0b1d33;
+  --card: #112a46;
+  --accent: #1e90ff;
+  --text: #ffffff;
+  --muted: #c9d6e3;
+}
 
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
+* {
+  box-sizing: border-box;
+}
 
-    li {
-      display: grid;
-      grid-template-columns: 220px 1fr;
-      gap: 25px;
-      align-items: center;
-      margin-bottom: 50px;
-      text-align: left;
-    }
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, #081624, #0b1d33);
+  color: var(--text);
+  padding: 40px 20px;
+}
 
-    .project-image {
-      max-width: 200px;
-      border-radius: 6px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.35);
-    }
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
 
-    .project-content {
-      display: flex;
-      flex-direction: column;
-    }
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
 
-    .project-title {
-      margin: 0;
-      font-size: 24px;
-    }
+.project-card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 32px;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 28px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    .project-description {
-      margin-top: 8px;
-      line-height: 1.6;
-    }
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+}
 
-    .home-button {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-    }
+.project-image {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
 
-    .home-button a {
-      text-decoration: none;
-      color: #fff; /* White text */
-      padding: 10px 15px;
-      border-radius: 5px;
-      background-color: #0074D9; /* Bright Blue */
-      transition: background-color 0.3s;
-    }
+.project-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
 
-    .home-button a:hover {
-      background-color: #0056b3; /* Darker Blue */
-    }
-    
-  </style>
+.project-description {
+  margin-top: 10px;
+  line-height: 1.65;
+  color: var(--muted);
+  font-size: 15.5px;
+}
+
+.home-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+.home-button a {
+  background: var(--accent);
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.home-button a:hover {
+  background: #187bcd;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+</style>
 </head>
+
 <body>
+
+<div class="home-button">
+  <a href="index.html">Back</a>
+</div>
+
+<div class="container">
   <h1>Projects</h1>
 
-  <ul>
-    <li>
-      <h2 class="project-title">Checkers Game - Python</h2>
-      <img class="project-image" src="checkers.png" alt="Checkers">
-      <div class="project-content">
-      <p class="project-description">Our team of three accomplished the development of an engaging two-player checkers game, complete with a user-friendly interface and an intelligent AI opponent. We leveraged the capabilities of the pygame and tkinter libraries in Python to build this interactive gaming experience. Pygame enabled us to handle graphics, animation, and user input, while tkinter facilitated the creation of an intuitive and visually appealing interface. The highlight of our project was the implementation of an AI opponent that intelligently strategizes and makes moves based on game analysis. Together, these components combined to deliver a captivating checkers game that guarantees hours of entertainment for players of all skill levels.</p>
-      </div>
-    </li>
-    <li>
-      <h2 class="project-title">Relational Database - MySQL</h2>
-      <img class="project-image" src="database.jpg" alt="database">
-      <div class="project-content">
-      <p class="project-description">We designed and developed a simulated Major League Baseball (MLB) database that mirrors the real-life structure of the MLB. This comprehensive database comprises more than 14 entities, representing various aspects of the league, as well as 8 relationships that capture the interconnections between these entities. To populate the database with substantial data, we generated thousands of entries using Excel CSV files, ensuring the authenticity of the information while maintaining the fictitious nature of the data. This project aims to provide a robust platform for exploring and analyzing MLB-related scenarios and data-driven insights.</p>
-      </div>
-    </li>
-    <li>
-      <h2 class="project-title">Marvel Cinematic Universe Network - Python</h2>
-      <img class="project-image" src="MCUgraph.jpg" alt="MCU">
-      <div class="project-content">
+  <div class="project-card">
+    <img class="project-image" src="checkers.png" alt="Checkers">
+    <div>
+      <h2 class="project-title">Checkers Game — Python</h2>
       <p class="project-description">
-        Utilizing OpenAI's GPT-3.5, we harnessed Python and Networkx to extract movie dialogues, enabling us to construct a comprehensive network representation of Marvel characters. In this network, each character is depicted as a node, while interactions between characters are represented as links. Working collaboratively in a team of two, we not only created a visually appealing gml file but also conducted extensive analysis on the network structure and dynamics.
-        </div>
+        Our team of three developed an engaging two-player checkers game featuring a clean user interface and an intelligent AI opponent. Built using Python with pygame and tkinter, the system handles animation, player interaction, and strategic AI decision-making, delivering an immersive and entertaining gameplay experience.
       </p>
-    </li>
-  </ul>
-
-  <div class="home-button">
-    <a href="index.html">Back</a>
+    </div>
   </div>
+
+  <div class="project-card">
+    <img class="project-image" src="database.jpg" alt="Database">
+    <div>
+      <h2 class="project-title">Relational Database — MySQL</h2>
+      <p class="project-description">
+        Designed and implemented a simulated Major League Baseball database consisting of over 14 entities and 8 complex relationships. Thousands of records were generated using structured CSV imports, creating a realistic dataset for advanced querying, analysis, and relational modeling.
+      </p>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <img class="project-image" src="MCUgraph.jpg" alt="MCU">
+    <div>
+      <h2 class="project-title">MCU Character Network — Python</h2>
+      <p class="project-description">
+        Leveraged Python, NetworkX, and OpenAI's GPT-3.5 to extract movie dialogue and construct a large-scale character interaction network. Each character is modeled as a node with dynamic relationships, producing a visually rich and analytically valuable network representation.
+      </p>
+    </div>
+  </div>
+
+</div>
 
 </body>
 </html>
