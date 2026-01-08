@@ -1,125 +1,132 @@
-
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-    <meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-        
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-      background-color: #001f3f; /* Navy Blue */
-      color: #fff; /* White text */
-    }
+<meta charset="UTF-8">
+<title>Jacob Williams — Resume</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    h1 {
-      color: #fff;
-      text-align: center;
-      margin-top: 0;
-    }
+<style>
+:root {
+  --bg: #0b1d33;
+  --panel: #112a46;
+  --accent: #1e90ff;
+  --text: #ffffff;
+  --muted: #c9d6e3;
+}
 
-    iframe {
-      display: block;
-      margin: 20px auto;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    }
+* { box-sizing: border-box; }
 
-    h2 {
-      color: #555;
-      margin-bottom: 10px;
-      text-align: center;
-    }
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, #081624, #0b1d33);
+  color: var(--text);
+  padding: 30px 20px;
+}
 
-    ul {
-      list-style: none;
-      padding-left: 0;
-      display: flex;
-      justify-content: center;
-    }
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
 
-    li {
-      margin: 0 10px;
-    }
+h1 {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
 
-    a {
-      text-decoration: none;
-      color: #FFF;
-      padding: 10px 15px;
-      border-radius: 5px;
-      background-color: #333;
-      transition: background-color 0.3s;
-    }
+/* Navigation Tabs */
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 32px;
+}
 
-    a:hover {
-      background-color: #164fec;
-    }
+.nav-tabs a {
+  padding: 10px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--text);
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+  transition: all 0.25s ease;
+  font-weight: 500;
+}
 
-    .contact-section {
-      text-align: center;
-      margin-top: 50px;
-    }
+.nav-tabs a:hover {
+  background: var(--accent);
+  transform: translateY(-2px);
+}
 
-    .contact-info {
-      margin-top: 20px;
-      font-size: 18px;
-    }
+/* Resume Frame */
+.resume-panel {
+  background: var(--panel);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 14px 36px rgba(0,0,0,0.4);
+}
 
-    .portfolio-button {
-      display: block;
-      text-align: center;
-      margin-bottom: 20px;
-    }
+iframe {
+  width: 100%;
+  height: 900px;
+  border: none;
+  border-radius: 12px;
+}
 
-    .portfolio-button a {
-      text-decoration: none;
-      color: #fff; /* White text */
-      padding: 10px 15px;
-      border-radius: 5px;
-      background-color: #0074D9; /* Bright Blue */
-      transition: background-color 0.3s;
-    }
+/* Contact */
+.contact-section {
+  text-align: center;
+  margin-top: 50px;
+}
 
-    .about-me-button a {
-      text-decoration: none;
-      color: #fff; /* White text */
-      padding: 10px 15px;
-      border-radius: 5px;
-      background-color: #0074D9; /* Bright Blue */
-      transition: background-color 0.3s;
-    }
+.contact-info {
+  color: var(--muted);
+  margin: 8px 0;
+}
 
-    .portfolio-button a:hover {
-      background-color: #164fec; /* Darker Blue */
-    }
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: var(--muted);
+}
 
-  </style>
-
-
-  </style>
-
+@media (max-width: 768px) {
+  iframe { height: 650px; }
+  .nav-tabs { flex-wrap: wrap; }
+}
+</style>
 </head>
-<h1>Welcome!</h1>
 
-<ul>
-  <li><a href="https://www.linkedin.com/in/jacob-williams-dev/">LinkedIn</a></li>
-  <li><a href="https://github.com/jacobwilliamscs">GitHub</a></li>
-  <li><a href="websiteportfolio.html">Portfolio</a></li>
-  <li><a href="aboutme.html">About</a></li>
-  
-</ul>
 <body>
-  <iframe src="JacobWilliams.pdf" width="90%" height="900px"></iframe>
-</body>
+
+<div class="container">
+
+<h1>Welcome</h1>
+
+<div class="nav-tabs">
+  <a href="https://www.linkedin.com/in/jacob-williams-dev/">LinkedIn</a>
+  <a href="https://github.com/jacobwilliamscs">GitHub</a>
+  <a href="websiteportfolio.html">Portfolio</a>
+  <a href="aboutme.html">About</a>
+</div>
+
+<div class="resume-panel">
+  <iframe src="JacobWilliams.pdf"></iframe>
+</div>
 
 <div class="contact-section">
-    <h2>Contact Information</h2>
-    <p class="contact-info">Phone: +1 (636) 544-5759</p>
-    <p class="contact-info">Email: jacobmiwilliams@gmail.com</p>
-  </div>
+  <h2>Contact Information</h2>
+  <p class="contact-info">Phone: +1 (636) 544-5759</p>
+  <p class="contact-info">Email: jacobmiwilliams@gmail.com</p>
+</div>
 
-<footer> All Rights Reserved - 2023 Jacob Williams</footer>
+<footer>All Rights Reserved — 2026</footer>
 
+</div>
+
+</body>
 </html>
-
