@@ -1,103 +1,169 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charSet="utf-8"/>
-    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #001f3f; /* Navy Blue */
-            color: #fff; /* White text */
-        }
+<meta charset="UTF-8">
+<title>About — Jacob Williams</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-        h1 {
-            color: #fff; /* White text */
-            text-align: center;
-            margin-top: 0;
-        }
+<style>
+:root {
+  --bg: #0b1d33;
+  --panel: #112a46;
+  --accent: #1e90ff;
+  --text: #ffffff;
+  --muted: #c9d6e3;
+}
 
-        h2 {
-            color: #fff;
-            text-align: left;
-            margin-top: 0;
-        }
+* { box-sizing: border-box; }
 
-        .profile-picture {
-            border-radius: 50%;
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-        }
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, #081624, #0b1d33);
+  color: var(--text);
+}
 
-        .back-button {
-            display: inline-block;
-            background-color: #0074D9;
-            padding: 10px 15px;
-            border-radius: 5px;
-            color: #fff;
-            text-decoration: none;
-            margin-bottom: 20px;
-        }
+/* ===== Navigation ===== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  background: rgba(17, 42, 70, 0.85);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.35);
+}
 
-        .about-container {
-            display: flex;
-            align-items: center;
-        }
+.nav-inner {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+}
 
-        .about-text {
-            margin-left: 20px;
-        }
+.logo {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
 
-        .home-button {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-        }
+.nav-links {
+  display: flex;
+  gap: 12px;
+}
 
-        .home-button a {
-            text-decoration: none;
-            color: #fff; /* White text */
-            padding: 10px 15px;
-            border-radius: 5px;
-            background-color: #0074D9; /* Bright Blue */
-            transition: background-color 0.3s;
-        }
+.nav-links a {
+  padding: 8px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
 
-        .home-button a:hover {
-            background-color: #0056b3; /* Darker Blue */
-        }
+.nav-links a:hover {
+  background: var(--accent);
+  transform: translateY(-1px);
+}
 
-        .footer {
-            color: #fff; /* White text */
-            text-align: left;
-            margin-bottom: 0;
-        }
+/* ===== Content ===== */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 50px 20px;
+}
 
-    </style>
+.page-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
 
+.page-title h1 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.about-panel {
+  background: var(--panel);
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.45);
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.profile-picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.about-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  margin-top: 50px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+</style>
 </head>
 
 <body>
- 
+
+<!-- Navigation -->
+<div class="navbar">
+  <div class="nav-inner">
+    <div class="logo">Jacob Williams</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="websiteportfolio.html">Portfolio</a>
+      <a href="aboutme.html">About</a>
+      <a href="https://github.com/jacobwilliamscs">GitHub</a>
+      <a href="https://www.linkedin.com/in/jacob-williams-dev/">LinkedIn</a>
+    </div>
+  </div>
+</div>
+
+<!-- Main Content -->
+<div class="container">
+
+  <div class="page-title">
     <h1>About Me</h1>
+  </div>
+
+  <div class="about-panel">
     <div class="about-container">
-        <img alt="" src="me.JPG" class="profile-picture" decoding="async" data-nimg="1">
-        <div class="about-text">
-            
-        </body>
-    </div>
-            <p class="About-Me">I'm Jacob Williams, a software developer with experience in many different programming languages. Including but not limited to Python, MySQL, Node.js, PHP, Java, C, C++, C#, R,...</p>
-        
-    </div>
-
-    <div class="home-button">
-        <a href="index.html">Back</a>
+      <img src="me.JPG" alt="Jacob Williams" class="profile-picture">
+      <div class="about-text">
+        <p>
+          I'm Jacob Williams, a software developer with experience across a wide range of programming languages including Python, MySQL, Node.js, PHP, Java, C, C++, C#, and R. I enjoy designing clean, efficient systems and building applications that solve real-world problems.
+        </p>
       </div>
+    </div>
+  </div>
 
-    <footer>© 2026</footer>
+  <footer>© 2026</footer>
 
+</div>
+
+</body>
 </html>
