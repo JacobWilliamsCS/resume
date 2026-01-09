@@ -66,6 +66,11 @@ body {
   transform: translateY(-1px);
 }
 
+.nav-links a.active {
+  background: var(--accent);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
 /* ===== Content ===== */
 .container {
   max-width: 1000px;
@@ -136,7 +141,7 @@ footer {
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="websiteportfolio.html">Portfolio</a>
-      <a href="aboutme.html">About</a>
+      <a href="aboutme.html" class="active">About</a>
       <a href="https://github.com/jacobwilliamscs">GitHub</a>
       <a href="https://www.linkedin.com/in/jacob-williams-dev/">LinkedIn</a>
     </div>
